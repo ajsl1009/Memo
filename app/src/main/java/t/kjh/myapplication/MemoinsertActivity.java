@@ -133,7 +133,7 @@ public class MemoinsertActivity extends Activity {
                     int permissionCheck = ContextCompat.checkSelfPermission(MemoinsertActivity.this, Manifest.permission.CAMERA);
                     if(permissionCheck == PackageManager.PERMISSION_DENIED){
                         ActivityCompat.requestPermissions(MemoinsertActivity.this, new String[]{Manifest.permission.CAMERA}, 0);
-
+                        dispatchTakePictureIntent();
                     }else {
                         /*Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                         if (intent.resolveActivity(getPackageManager()) != null) {
